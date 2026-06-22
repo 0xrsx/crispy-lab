@@ -1,0 +1,33 @@
+{
+  "name": "crispy-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cms-be:gen-client": "make generate-cms-client",
+    "cms-be:dev": "pnpm --filter cms-backend start:dev",
+    "cms-fe:dev": "pnpm --filter cms-frontend dev",
+    "packages:build": "pnpm -r --filter './packages/*' build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": [
+      {
+        "name": "pnpm",
+        "version": "^11.6.0",
+        "onFail": "download"
+      },
+      {
+        "name": "npm"
+      }
+    ]
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "typescript": "^6.0.3"
+  }
+}
