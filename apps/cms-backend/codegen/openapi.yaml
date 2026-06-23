@@ -1,0 +1,563 @@
+openapi: 3.0.0
+paths:
+  /:
+    get:
+      operationId: AppController_getRandomName
+      parameters: []
+      responses:
+        default:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ex1'
+      tags:
+        - App
+  /account:
+    post:
+      operationId: AccountController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateAccountDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+        - Account
+    get:
+      operationId: AccountController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Account
+  /account/{id}:
+    get:
+      operationId: AccountController_findOne
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Account
+    patch:
+      operationId: AccountController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateAccountDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Account
+    delete:
+      operationId: AccountController_remove
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Account
+  /merchant:
+    post:
+      operationId: MerchantController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateMerchantDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+        - Merchant
+    get:
+      operationId: MerchantController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Merchant
+  /merchant/{id}:
+    get:
+      operationId: MerchantController_findOne
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Merchant
+    patch:
+      operationId: MerchantController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateMerchantDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Merchant
+    delete:
+      operationId: MerchantController_remove
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Merchant
+  /branch:
+    post:
+      operationId: BranchController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateBranchDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+        - Branch
+    get:
+      operationId: BranchController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Branch
+  /branch/{id}:
+    get:
+      operationId: BranchController_findOne
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Branch
+    patch:
+      operationId: BranchController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateBranchDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Branch
+    delete:
+      operationId: BranchController_remove
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Branch
+  /product:
+    post:
+      operationId: ProductController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateProductDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+        - Product
+    get:
+      operationId: ProductController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Product
+  /product/{id}:
+    get:
+      operationId: ProductController_findOne
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Product
+    patch:
+      operationId: ProductController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateProductDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Product
+    delete:
+      operationId: ProductController_remove
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Product
+  /menu:
+    post:
+      operationId: MenuController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateMenuDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+        - Menu
+    get:
+      operationId: MenuController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Menu
+  /menu/{id}:
+    get:
+      operationId: MenuController_findOne
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Menu
+    patch:
+      operationId: MenuController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateMenuDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Menu
+    delete:
+      operationId: MenuController_remove
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Menu
+  /tag:
+    post:
+      operationId: TagController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTagDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+        - Tag
+    get:
+      operationId: TagController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Tag
+  /tag/{id}:
+    get:
+      operationId: TagController_findOne
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Tag
+    patch:
+      operationId: TagController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateTagDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Tag
+    delete:
+      operationId: TagController_remove
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Tag
+  /order:
+    post:
+      operationId: OrderController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateOrderDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+        - Order
+    get:
+      operationId: OrderController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Order
+  /order/{id}:
+    get:
+      operationId: OrderController_findOne
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Order
+    patch:
+      operationId: OrderController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateOrderDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Order
+    delete:
+      operationId: OrderController_remove
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+        - Order
+info:
+  title: CMS APIs
+  description: The CMS APIs
+  version: '1.0'
+  contact: {}
+tags: []
+servers: []
+components:
+  schemas:
+    Ex1:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The unique identification integer
+          example: 1
+        name:
+          type: string
+          description: The unique identification integer
+          example: 1
+      required:
+        - id
+        - name
+    CreateAccountDto:
+      type: object
+      properties: {}
+    UpdateAccountDto:
+      type: object
+      properties: {}
+    CreateMerchantDto:
+      type: object
+      properties: {}
+    UpdateMerchantDto:
+      type: object
+      properties: {}
+    CreateBranchDto:
+      type: object
+      properties: {}
+    UpdateBranchDto:
+      type: object
+      properties: {}
+    CreateProductDto:
+      type: object
+      properties: {}
+    UpdateProductDto:
+      type: object
+      properties: {}
+    CreateMenuDto:
+      type: object
+      properties: {}
+    UpdateMenuDto:
+      type: object
+      properties: {}
+    CreateTagDto:
+      type: object
+      properties: {}
+    UpdateTagDto:
+      type: object
+      properties: {}
+    CreateOrderDto:
+      type: object
+      properties: {}
+    UpdateOrderDto:
+      type: object
+      properties: {}

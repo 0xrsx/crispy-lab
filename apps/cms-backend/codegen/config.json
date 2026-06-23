@@ -1,0 +1,6 @@
+{
+  "npmName": "@crispy-lab/cms-client",
+  "npmVersion": "1.0.0",
+  "sortModelPropertiesByRequiredFlag": true,
+  "sortParamsByRequiredFlag": true
+}
